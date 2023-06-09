@@ -41,12 +41,7 @@ public class Customer extends Merchandise{
 	        this.email = email;
 	    }
 
-	    /*@Override
-	    public String[] Validate() {
-	        // Validation logic for Customer
-	        // ...
-	        return new String[0];
-	    } */
+	    
 	    @Override
 	    public String[] validate() {
 	        List<String> errors = new ArrayList<>();
@@ -76,10 +71,7 @@ public class Customer extends Merchandise{
 			super();
 		}
 
-		//@Override
-	   // public void Print() {
-	        // Print logic for Customer
-	        // ...
+		
 		public void print() {
 	        System.out.println("Customer Details:");
 	        System.out.println("Partner ID: " + getPartnerId());

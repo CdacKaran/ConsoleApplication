@@ -53,37 +53,13 @@ public abstract class Merchandise {
         this.state = state;
     }
 
-  /*  public String[] Validate() {
-        // Validation logic
-    	if(partnerId<=0)
-    	{
-    		System.out.println("Enter a valid Partner ID Number...");
-    	}
-    	else if(partnerName.length()<=5)
-    	{
-    		System.out.println("Enter a Partner Name with minimum 5 characters..");
-    	}
-    	else if(city.length()<=3)
-    	{
-    		System.out.println("Enter a City Name with minimum 3 characters..");
-    	}	
-    	else if(state.length()<=3)
-    	{
-    		System.out.println("Enter a State Name with minimum 3 characters..");
-    	}	
-    	
-        // ...
-        return new String[0];
-        
-        
-    }*/
+  
     public abstract String[] validate();
 
-    // Constructors, getters, and setters
+    
 
     public String[] commonValidate() {
-        // Common validation logic for partnerName, city, and state
-        List<String> errors = new ArrayList<>();
+                List<String> errors = new ArrayList<>();
 
         if (partnerName == null || partnerName.length() < 5) {
             errors.add("Partner Name should be at least 5 characters long.");
@@ -101,7 +77,6 @@ public abstract class Merchandise {
     }
 
     public void Print() {
-        // Print logic
-        // ...
+        
     }
 }

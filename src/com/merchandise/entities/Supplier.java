@@ -42,12 +42,7 @@ public class Supplier extends Merchandise {
         this.drivingLicenseNumber = drivingLicenseNumber;
     }
 
-    /* @Override
-    public String[] Validate() {
-        // Validation logic for Supplier
-        // ...
-        return new String[0];
-    } */
+   
     @Override
     public String[] validate() {
         List<String> errors = new ArrayList<>();
@@ -56,18 +51,12 @@ public class Supplier extends Merchandise {
 
         if (creditBalance > 175000) {
             errors.add("Credit Balance cannot exceed 1,75,000.");
-        }
-
-        // Add driving license number validation logic
-
+        }        
         return errors.toArray(new String[0]);
     }
-
-    
+  
    
-        // Print logic for Supplier
-        // ...
-    //@Override
+        
     	public void print() {
             System.out.println("Supplier Details:");
             System.out.println("Partner ID: " + getPartnerId());
