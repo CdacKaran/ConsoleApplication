@@ -62,15 +62,15 @@ public abstract class Merchandise {
                 List<String> errors = new ArrayList<>();
 
         if (partnerName == null || partnerName.length() < 5) {
-            errors.add("Partner Name should be at least 5 characters long.");
+            errors.add("Please enter valid Partner Name must contain atleast 5 characters...");
         }
 
         if (city == null || city.length() < 3) {
-            errors.add("City should be at least 3 characters long.");
+            errors.add("Please enter valid City must contain at least 3 characters...");
         }
 
         if (state == null || state.length() < 3) {
-            errors.add("State should be at least 3 characters long.");
+            errors.add(" Enter valid State should be at least 3 characters...");
         }
 
         return errors.toArray(new String[0]);

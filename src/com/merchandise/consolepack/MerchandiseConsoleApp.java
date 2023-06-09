@@ -21,7 +21,7 @@ public class MerchandiseConsoleApp {
             System.out.print("Enter your choice: ");
             try {
                 choice = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character
+                scanner.nextLine();
                 System.out.println();
 
                 switch (choice) {
@@ -44,14 +44,14 @@ public class MerchandiseConsoleApp {
                         searchSupplier(scanner);
                         break;
                     case 7:
-                        System.out.println("Exiting the application...");
+                        System.out.println("Exiting the application...Thankyou for visiting..");
                         break;
                     default:
                         System.out.println("Invalid choice. Please try again.");
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a number.");
+                System.out.println("Invalid input. Please enter a valid number.");
                 scanner.nextLine(); // Consume the invalid input
                 choice = 0;
             }
@@ -63,7 +63,7 @@ public class MerchandiseConsoleApp {
     }
 
     private static void displayMenu() {
-        System.out.println("** Merchandise Partner Tracking **");
+        System.out.println("** Application for Merchandise Partner Tracking **");
         System.out.println("1. Add Customer");
         System.out.println("2. Add Supplier");
         System.out.println("3. Display Customer Report");
@@ -106,7 +106,7 @@ public class MerchandiseConsoleApp {
         customer.setEmail(scanner.nextLine());
 
         merchandiseService.saveCustomerDetails(customer);
-        System.out.println("Customer added successfully.");
+        //System.out.println("Customer added successfully.");
     }
 
     private static void addSupplier(Scanner scanner) {
@@ -139,7 +139,7 @@ public class MerchandiseConsoleApp {
         supplier.setDrivingLicenseNumber(scanner.nextLine());
 
         merchandiseService.saveSupplierDetails(supplier);
-        System.out.println("Supplier added successfully.");
+        //System.out.println("Supplier added successfully.");
     }
 
     private static void displayCustomerReport() {

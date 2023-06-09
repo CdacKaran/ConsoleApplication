@@ -49,17 +49,16 @@ public class Customer extends Merchandise{
 	        errors.addAll(Arrays.asList(super.commonValidate()));
 
 	        if (creditLimit > 50000) {
-	            errors.add("Credit Limit cannot exceed 50,000.");
+	            errors.add("Credit Limit cannot exceed Rs50,000.");
 	        }
 
 	        if (phoneNumber == null || phoneNumber.length() != 10) {
-	            errors.add("Phone Number should be 10 digits long.");
-	        }
-
-	        // Add email validation logic
-
+	            errors.add("Enter a valid Phone Number..");
+	        } 
+	       
 	        return errors.toArray(new String[0]);
-	    }
+	        }
+	    
 
 	    public Customer(int partnerId, String partnerName, String city, String state) {
 			super(partnerId, partnerName, city, state);
