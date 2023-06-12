@@ -72,6 +72,8 @@ public abstract class Merchandise {
         if (state == null || state.length() < 3) {
             errors.add(" Enter valid State should be at least 3 characters...");
         }
+        
+        
 
         return errors.toArray(new String[0]);
     }

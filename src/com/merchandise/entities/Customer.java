@@ -3,6 +3,8 @@ package com.merchandise.entities;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Customer extends Merchandise{
 	 private double creditLimit;
@@ -56,9 +58,21 @@ public class Customer extends Merchandise{
 	            errors.add("Enter a valid Phone Number..");
 	        } 
 	       
+	        if (email == null || !isValidEmail(email)) {
+	            errors.add("Please enter a valid email address.");
+	            	            
+	   	        }
+	        
 	        return errors.toArray(new String[0]);
 	        }
 	    
+	    protected boolean isValidEmail(String email) {
+            String emailPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+            Pattern pattern = Pattern.compile(emailPattern);
+            Matcher matcher = pattern.matcher(email);
+            return matcher.matches();
+        }
+    
 
 	    public Customer(int partnerId, String partnerName, String city, String state) {
 			super(partnerId, partnerName, city, state);
